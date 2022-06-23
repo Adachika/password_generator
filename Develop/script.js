@@ -14,22 +14,27 @@ function chooseLength() {
 
   // Use conditionals to restrict user to select password length between 8 and 128 characters inclusive
 
-  if (passwordLength<8){
+    if (passwordLength<8){
     alert("Password length must be at least 8 characters long");
     chooseLength();
-  }else if (passwordLength>128){
+    }else if (passwordLength>128){
     alert("Password length must be less than 129 characters");
     chooseLength();
-  }else if (isNaN(passwordLength)){
+    }else if (isNaN(passwordLength)){
     alert("Password length must be a number between 8-128 characters");
     chooseLength();
-  }else{
-  alert("Please select what character types you would like to be included in your password.");
-  }
-  return passwordLength;
+    }else{
+    alert("Please select what character types you would like to be included in your password.");
+    }
+    return passwordLength;
 
 }
-chooseLength();
+
+function generatePassword(){
+  chooseLength();
+  console.log(passwordLength);
+}
+
 
 // Write password to the #password input
 function writePassword() {
