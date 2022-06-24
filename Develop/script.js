@@ -30,9 +30,22 @@ function chooseLength() {
 
 }
 
+// Let's ask the user what character types to include in their password (must include at least one type)
+function charType() {
+var upperCase = confirm("Click OK to include Upper case characters");
+var lowerCase = confirm("click OK to include lower case characters");
+var specialCase = confirm("Click OK to include special characters");
+
+// Alert to notify user that at least one character type must be selected
+  if (!(upperCase || lowerCase || specialCase )) {
+  return alert("You must select at least one character type");
+  }
+}
+
 function generatePassword(){
   chooseLength();
-  console.log(passwordLength);
+  console.log(passwordLength)
+  charType();
 }
 
 
