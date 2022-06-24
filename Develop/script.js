@@ -2,10 +2,10 @@
 var generateBtn = document.querySelector("#generate");
 
 // Declare variables for uppercase, lowercase, numeric, and special characters.
-var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-var numeric = "0123456789";
-var special = "!@#$%^&*()_-+={}[];:'`~<,>.?/|";
+const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+const numeric = "0123456789";
+const special = "!@#$%^&*()_-+={}[];:'`~<,>.?/|";
 var passwordLength;
 var upperChar;
 var lowerChar;
@@ -53,11 +53,12 @@ function generatePassword(){
   charType();
   console.log(passwordLength);
 
-    var chars = "";
+    var chars = [];
     var password = "";
 
   if (upperChar){
   chars += upperCase;
+  
   }
 
   if (lowerChar){
