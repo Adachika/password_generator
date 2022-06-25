@@ -10,7 +10,6 @@ Password generator
  - Generated password based on user-selected criteria.
 
  ### Link to deployed application
- 
 
 
  ### Credits
